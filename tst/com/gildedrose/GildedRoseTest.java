@@ -129,7 +129,7 @@ public class GildedRoseTest {
     }
 
     @Test
-    public void otherProductSellInDecreasesByOneAndQualityDecreasesByTwoWhenSellInEqualsZero() {
+    public void otherProductSellInDecreasesByOneAndQualityDecreasesByTwoWhenSellInIsLessThanOrEqualToZero() {
         item = new OtherItem(Item.OTHER, 0, 10);
         createItemArray();
         createAppAndUpdateItems();
