@@ -7,6 +7,8 @@ class ConjuredItem extends Item {
 
     @Override
     void UpdateQuality() {
+        sellIn -= 1;
 
+        quality -= 2;
     }
 }
