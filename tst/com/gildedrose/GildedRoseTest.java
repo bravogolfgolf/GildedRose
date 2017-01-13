@@ -113,24 +113,24 @@ public class GildedRoseTest {
     }
 
     @Test
-    public void otherProductSellInAndQualityDecreasesByOneIfQualityIsGreaterThanZero() {
-        item = new OtherItem(Item.OTHER, 10, 10);
+    public void normalProductSellInAndQualityDecreasesByOneIfQualityIsGreaterThanZero() {
+        item = new NormalItem(Item.OTHER, 10, 10);
         createItemArray();
         createAppAndUpdateItems();
         assertEquals(Item.OTHER, 9, 9);
     }
 
     @Test
-    public void otherProductSellInDecreasesByOneAndQualityDoesNotChangeIfLessThanZero() {
-        item = new OtherItem(Item.OTHER, 0, 0);
+    public void normalProductSellInDecreasesByOneAndQualityDoesNotChangeIfLessThanZero() {
+        item = new NormalItem(Item.OTHER, 0, 0);
         createItemArray();
         createAppAndUpdateItems();
         assertEquals(Item.OTHER, -1, 0);
     }
 
     @Test
-    public void otherProductSellInDecreasesByOneAndQualityDecreasesByTwoWhenSellInIsLessThanOrEqualToZero() {
-        item = new OtherItem(Item.OTHER, 0, 10);
+    public void normalProductSellInDecreasesByOneAndQualityDecreasesByTwoWhenSellInIsLessThanOrEqualToZero() {
+        item = new NormalItem(Item.OTHER, 0, 10);
         createItemArray();
         createAppAndUpdateItems();
         assertEquals(Item.OTHER, -1, 8);

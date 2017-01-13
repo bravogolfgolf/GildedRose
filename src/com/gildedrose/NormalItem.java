@@ -1,7 +1,7 @@
 package com.gildedrose;
 
-class OtherItem extends Item {
-    OtherItem(String name, int sellin, int quality) {
+class NormalItem extends Item {
+    NormalItem(String name, int sellin, int quality) {
         super(name, sellin, quality);
     }
 
