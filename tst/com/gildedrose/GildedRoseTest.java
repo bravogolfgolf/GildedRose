@@ -122,10 +122,10 @@ public class GildedRoseTest {
 
     @Test
     public void otherProductSellInDecreasesByOneAndQualityDoesNotChangeIfLessThanZero() {
-        item = new OtherItem(Item.OTHER, 10, 0);
+        item = new OtherItem(Item.OTHER, 0, 0);
         createItemArray();
         createAppAndUpdateItems();
-        assertEquals(Item.OTHER, 9, 0);
+        assertEquals(Item.OTHER, -1, 0);
     }
 
     @Test

@@ -9,11 +9,12 @@ class OtherItem extends Item {
     void UpdateQuality() {
         sellIn -= 1;
 
-        if (quality > 0)
-            quality -= 1;
+        quality -= 1;
 
         if (sellIn < 0)
             quality -= 1;
 
+        if (quality < 0)
+            quality = 0;
     }
 }
