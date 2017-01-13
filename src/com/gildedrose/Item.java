@@ -1,14 +1,17 @@
 package com.gildedrose;
 
-public class Item {
+public abstract class Item {
 
-    public String name;
+    static final String AGED_BRIE = "Aged Brie";
+    static final String BACKSTAGE_PASS = "Backstage passes to a TAFKAL80ETC concert";
+    static final String SULFURAS = "Sulfuras, Hand of Ragnaros";
+    static final String OTHER = "Other";
 
-    public int sellIn;
+    String name;
+    int sellIn;
+    int quality;
 
-    public int quality;
-
-    public Item(String name, int sellIn, int quality) {
+    Item(String name, int sellIn, int quality) {
         this.name = name;
         this.sellIn = sellIn;
         this.quality = quality;
@@ -18,4 +21,6 @@ public class Item {
     public String toString() {
         return this.name + ", " + this.sellIn + ", " + this.quality;
     }
+
+    abstract void UpdateQuality();
 }
