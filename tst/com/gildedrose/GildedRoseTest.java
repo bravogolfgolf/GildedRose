@@ -135,4 +135,13 @@ public class GildedRoseTest {
         createAppAndUpdateItems();
         assertEquals(Item.OTHER, -1, 8);
     }
+
+    @Test
+    public void conjuredlProductSellInAndQualityDecreasesByTwoIfQualityIsGreaterThanZero() {
+        item = new ConjuredItem(Item.CONJURED, 10, 10);
+        createItemArray();
+        createAppAndUpdateItems();
+        assertEquals(Item.CONJURED, 9, 8);
+    }
+
 }
