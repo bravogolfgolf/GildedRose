@@ -11,6 +11,9 @@ class ConjuredItem extends Item {
 
         quality -= 2;
 
+        if (sellIn < 0)
+            quality -= 2;
+
         if (quality < 0)
             quality = 0;
     }
